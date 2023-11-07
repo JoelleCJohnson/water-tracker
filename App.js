@@ -7,7 +7,7 @@ import Controls from "./components/Controls";
 import { useState } from "react";
 
 export default function App() {
-const [volume, setVolume] = useState(500)
+const [volume, setVolume] = useState(0)
 
   return (
     <GluestackUIProvider config={config}>
@@ -15,7 +15,7 @@ const [volume, setVolume] = useState(500)
         <Title />
         <Goal volume={volume}/>
         <WaterImage />
-        <Controls setVolume={setVolume}/>
+        <Controls setVolume={setVolume} volume={volume}/>
       </Box>
     </GluestackUIProvider>
   );
